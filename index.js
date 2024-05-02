@@ -29,17 +29,17 @@ app.get('/', (req, res) => {
   res.render('main');
 });
 
-app.get('/ruta1', (req, res) => {
-  const images = ['img/icon1.jpeg', 'img/icon2.jpeg'];
+app.get('/r1', (req, res) => {
+  const images = ['icon1.jpeg', 'icon2.jpeg'];
   const randomIndex = Math.floor(Math.random() * images.length);
   const randomImage = images[randomIndex];
   const url = 'https://www.youtube.com';
 
-  res.render('ruta1', { image: randomImage, url: url });
+  res.render('r1', { image: randomImage, url: url });
 });
 
-app.get('/ruta2', (req, res) => {
-  res.render('ruta2');
+app.get('/r2', (req, res) => {
+  res.render('r2');
 });
 app.use(express.static(path.join(__dirname, 'public')));
 const PORT = process.env.PORT || 8000;
